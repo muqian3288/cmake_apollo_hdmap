@@ -17,6 +17,7 @@ find_package(Eigen3 REQUIRED)
 find_package(Boost REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(Protobuf REQUIRED)
+find_package(tinyxml2 CONFIG REQUIRED)
 
 
 file(GLOB protobuf_files
