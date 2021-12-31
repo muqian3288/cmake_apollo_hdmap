@@ -21,7 +21,12 @@ sudo ldconfig
 ```
 + tinyxml2-5.0.1: compile with source
 ```
-//todo
+https://github.com/leethomason/tinyxml2
+
+The package tinyxml2 provides CMake targets:
+    find_package(tinyxml2 CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE tinyxml2::tinyxml2)
+
 ```
 
 + eigen3
