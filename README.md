@@ -29,12 +29,11 @@ sudo ldconfig
 ```
 + tinyxml2-5.0.1: compile with source
 ```
-git clone -b 5.0.1 https://github.com/leethomason/tinyxml2.git
-cd tinyxml2
-mkdir build && cd build
-cmake -DCMAKE_INSTALL_PREFIX=/shared_dir/opt  ..
-make 
-make install
-cd ..
-rm -rf tinyxml2
+//todo
+```
+
++ eigen3
+
+```
+sudo apt-get install libeigen3-dev 
 ```
