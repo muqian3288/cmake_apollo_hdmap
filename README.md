@@ -13,6 +13,7 @@ build/test_api testdata/base_map.bin
 
 # 对比apollo代码模块
 - modules/map/hdmap 新增RSU，不替换
+- cyber/common 无明显更新，global_data ClockMode RunMode
 
 ## dep
 ```
