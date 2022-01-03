@@ -7,13 +7,9 @@ sudo bash build.sh
 ```
 
 # how to test map
-<<<<<<< HEAD
 ```
 build/test_api testdata/base_map.bin
 ```
-=======
-build/test_api testdata/base_map.bin
->>>>>>> 2a3d05661cbe1250cbf92afce7b3a30bf47af841
 
 ## dep
 ```
