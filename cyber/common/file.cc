@@ -95,26 +95,31 @@ bool SetProtoToBinaryFile(const google::protobuf::Message &message,
 bool GetProtoFromBinaryFile(const std::string &file_name,
                             google::protobuf::Message *message) {
   std::fstream input(file_name, std::ios::in | std::ios::binary);
+  AINFO << "GetProtoFromBinaryFile1: " << file_name << " in binary mode.";
   if (!input.good()) {
     AERROR << "Failed to open file " << file_name << " in binary mode.";
     return false;
   }
+  AINFO << "GetProtoFromBinaryFile2: " << file_name << " in binary mode.";
   if (!message->ParseFromIstream(&input)) {
     AERROR << "Failed to parse file " << file_name << " as binary proto.";
     return false;
   }
+  AINFO << "GetProtoFromBinaryFile3: " << file_name << " in binary mode.";
   return true;
 }
 
 bool GetProtoFromFile(const std::string &file_name,
                       google::protobuf::Message *message) {
   // Try the binary parser first if it's much likely a binary proto.
+  AINFO << "GetProtoFromFile: " << file_name << "...";
   static const std::string kBinExt = ".bin";
   if (std::equal(kBinExt.rbegin(), kBinExt.rend(), file_name.rbegin())) {
+    AINFO << "GetProtoFromFile2: " << file_name << "...";
     return GetProtoFromBinaryFile(file_name, message) ||
            GetProtoFromASCIIFile(file_name, message);
   }
-
+  AINFO << "GetProtoFromFile3: " << file_name << "...";
   return GetProtoFromASCIIFile(file_name, message) ||
          GetProtoFromBinaryFile(file_name, message);
 }
