@@ -23,9 +23,11 @@ int main (int argc, char** argv) {
   // (427292.62534242147, 4419239.997745479, 50, 'S')
   // apollo::common::PointENU point = apollo::common::util::MakePointENU(
   //       427292.62534242147, 4419239.997745479, 73.4581222534180);
+
+  // "map_center":{ "x":453768.04110132577, "y":4399410.81022235}, yizhuang
   apollo::common::PointENU point;
-  point.set_x(427292.62534242147);
-  point.set_y(4419239.997745479);
+  point.set_x(453768.04110132577);
+  point.set_y(4399410.81022235);
   point.set_z(73.4581222534180);
 
   /**
