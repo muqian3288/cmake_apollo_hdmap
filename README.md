@@ -5,7 +5,7 @@ Apollo HDMap SDK compiled with cmake.
 sudo bash build.sh
 
 # how to test map
-build/test_map testdata/base_map.bin
+build/test_api testdata/base_map.bin
 
 ## dep
 ```
