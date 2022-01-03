@@ -46,6 +46,7 @@ constexpr int kBackwardDistance = 4;
 }  // namespace
 
 int HDMapImpl::LoadMapFromFile(const std::string& map_filename) {
+  AINFO << "LoadMapFromFile: " << map_filename << "...";
   Clear();
   // TODO(All) seems map_ can be changed to a local variable of this
   // function, but test will fail if I do so. if so.
