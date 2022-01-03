@@ -4,6 +4,9 @@ Apollo HDMap SDK compiled with cmake.
 # how to build
 sudo bash build.sh
 
+# how to test map
+build/test_map testdata/base_map.bin
+
 ## dep
 ```
 sudo apt-get install autoconf automake libtool curl make g++ unzip
