@@ -1,6 +1,8 @@
 # cmake_apollo_hdmap
 Apollo HDMap SDK compiled with cmake.
 
+# how to build
+sudo bash build.sh
 
 ## dep
 ```
