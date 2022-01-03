@@ -65,6 +65,7 @@ bool SetProtoToASCIIFile(const google::protobuf::Message &message,
 
 bool GetProtoFromASCIIFile(const std::string &file_name,
                            google::protobuf::Message *message) {
+  AINFO << "GetProtoFromASCIIFile: " << file_name << " ...";
   using google::protobuf::TextFormat;
   using google::protobuf::io::FileInputStream;
   using google::protobuf::io::ZeroCopyInputStream;
@@ -74,7 +75,7 @@ bool GetProtoFromASCIIFile(const std::string &file_name,
     // Failed to open;
     return false;
   }
-
+  AINFO << "GetProtoFromASCIIFile2: " << file_name << " ...";
   ZeroCopyInputStream *input = new FileInputStream(file_descriptor);
   bool success = TextFormat::Parse(input, message);
   if (!success) {
@@ -82,6 +83,7 @@ bool GetProtoFromASCIIFile(const std::string &file_name,
   }
   delete input;
   close(file_descriptor);
+  AINFO << "GetProtoFromASCIIFile3: " << file_name << " ...";
   return success;
 }
 
